@@ -52,6 +52,8 @@ def remove_song():
         print("❌ Vui lòng nhập số!")
 
 
+
+#------------Hien thi danh sach-------------
         
 def view_playlist():
     if not songs:
