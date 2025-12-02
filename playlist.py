@@ -52,7 +52,7 @@ def remove_song():
         print("❌ Vui lòng nhập số!")
 def view_playlist():
     if not songs:
-        print("📭 Playlist hiện đang trống!")
+        print("📭 Playlist hiện đang trốnga!")
         return
 
     print("\n===== DANH SÁCH BÀI HÁT TRONG PLAYLIST =====")
