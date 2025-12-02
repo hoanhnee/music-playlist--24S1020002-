@@ -50,3 +50,17 @@ def remove_song():
     except ValueError:
         print("❌ Vui lòng nhập số!")
 
+def search_by_artist():
+    """Hàm tìm kiếm bài hát theo tên ca sĩ"""
+    artist_name = input("\nNhập tên ca sĩ muốn tìm: ").lower()
+    
+    # Lọc danh sách bài hát, tìm kiếm không phân biệt chữ hoa/thường
+    found_songs = [s for s in songs if artist_name in s['artist'].lower()]
+    
+    if found_songs:
+        print(f"\nTìm thấy {len(found_songs)} bài hát của nghệ sĩ '{artist_name}':")
+        for s in found_songs:
+            # Dùng định dạng tương tự view_playlist
+            print(f"- {s['title']} ({s['duration']}s)")
+    else:
+        print(f"❌ Không tìm thấy bài hát nào của ca sĩ '{artist_name}'.")
