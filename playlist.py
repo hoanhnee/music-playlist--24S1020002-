@@ -29,3 +29,4 @@ add_song("Nắng Ấm Xa Dần", "Sơn Tùng MTP", 230)
 
 print("\nDanh sách bài hát hiện có:")
 print(songs)
+#-----------Da them bai hat ----------------
