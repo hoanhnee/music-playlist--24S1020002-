@@ -29,4 +29,24 @@ add_song("Nắng Ấm Xa Dần", "Sơn Tùng MTP", 230)
 
 print("\nDanh sách bài hát hiện có:")
 print(songs)
-#-----------Da them bai hat ----------------
+#-----------Xoa bai hat --------------
+def remove_song():
+    if not songs:
+        print("❌ Playlist trống!")
+        return
+
+    for i, song in enumerate(songs, start=1):
+        print(f"{i}. {song}")
+
+    try:
+        index = int(input("Nhập số thứ tự bài hát muốn xóa: "))
+        index -= 1  # vì danh sách bắt đầu từ 0
+
+        if 0 <= index < len(songs):
+            removed = songs.pop(index)
+            print(f"✔ Đã xóa bài hát: {removed}")
+        else:
+            print("❌ Số thứ tự không hợp lệ!")
+
+    except ValueError:
+        print("❌ Vui lòng nhập số!")
