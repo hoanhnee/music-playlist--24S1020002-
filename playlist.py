@@ -1,12 +1,26 @@
 songs = []
 #-------------GIAO DIEN CHINH---------------------
-def show_menu():
-    print("\n===== MENU QUẢN LÝ PLAYLIST =====")
-    print("1. Thêm bài hát")
-    print("2. Xóa bài hát")
-    print("3. Hiển thị danh sách")
-    print("0. Thoát")
-    print("=================================")
+def main():
+    while True: 
+        print("\n--- MUSIC PLAYLIST MANAGER ---") 
+        print("1. Thêm bài hát") 
+        print("2. Xem danh sách phát") 
+        print("3. Tìm bài hát theo ca sĩ") 
+        print("4. Thoát") 
+         
+        choice = input("Chọn chức năng: ") 
+         
+        if choice == '1': 
+            add_song() 
+        elif choice == '2': 
+            view_playlist() 
+        elif choice == '3': 
+            search_by_artist() 
+        elif choice == '4': 
+            print("Kết thúc chương trình.") 
+            break 
+        else: 
+            print("Lựa chọn không hợp lệ.")
 #---------------THEM BAI HAT----------------------
 def add_song(title, artist, duration):
     """
@@ -33,4 +47,5 @@ add_song("Lạc Trôi", "Sơn Tùng MTP", 240)
 add_song("Nắng Ấm Xa Dần", "Sơn Tùng MTP", 230)
 
 print("\nDanh sách bài hát hiện có:")
+
 print(songs)
