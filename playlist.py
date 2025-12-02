@@ -50,6 +50,9 @@ def remove_song():
 
     except ValueError:
         print("❌ Vui lòng nhập số!")
+
+
+        
 def view_playlist():
     if not songs:
         print("📭 Playlist hiện đang trốnga!")
