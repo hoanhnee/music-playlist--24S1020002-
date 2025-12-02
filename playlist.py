@@ -50,3 +50,14 @@ def remove_song():
 
     except ValueError:
         print("❌ Vui lòng nhập số!")
+def view_playlist():
+    if not songs:
+        print("📭 Playlist hiện đang trống!")
+        return
+
+    print("\n===== DANH SÁCH BÀI HÁT TRONG PLAYLIST =====")
+    
+    for i, song in enumerate(songs, start=1):
+        print(f"{i}. {song['title']} - {song['artist']} ({song['duration']}s)")
+    
+    print("============================================")
